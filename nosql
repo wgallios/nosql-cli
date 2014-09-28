@@ -1,5 +1,7 @@
 #!/usr/bin/env node
 
+process.title = 'NoSQL-cli';
+
 var chalk = require('chalk');
 var configFile = 'config';
 global.config = require('./' + configFile);

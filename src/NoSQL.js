@@ -22,12 +22,18 @@ NoSQL.prototype.processLine = function (line) {
 
     var _this = this;
 
+
+    if (!line)
+        return false;
+
     line = line.toLowerCase();
 
     if (line == 'clear')
         C.clearScreen();
     else
-        C.warn('Command not found!', { line: line });
+
+
+        C.warn('Command not found!');
 
     return true;
 };
