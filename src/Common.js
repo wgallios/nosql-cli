@@ -7,7 +7,7 @@ function Common () {
 
 Common.warn = function (msg, opts) {
 
-    if (opts == undefined) opts = {};
+    if (opts === undefined) opts = {};
 
     var line = (!opts.line) ? '' : ' ' + opts.line + ' - ';
 
