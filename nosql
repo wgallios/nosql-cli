@@ -1,0 +1,28 @@
+#!/usr/bin/env node
+
+var chalk = require('chalk');
+var configFile = 'config';
+global.config = require('./' + configFile);
+global.program = require('commander');
+global.Q = require('q');
+global.C = require('./src/Common');
+var NoSQL = require('./src/NoSQL');
+var usage = require('./src/usage');
+
+global.readline = require('readline');
+
+program
+    .version(config.version)
+    .usage(usage)
+    .option('-f, --database [Database File..]', 'NoSQL Database File')
+    .option('-d, --debug', 'Enable Debug mode (Outputs a bit extra)')
+    .parse(process.argv);
+
+
+    if (program.debug === undefined) program.debug = false;
+
+
+    var nosql = new NoSQL(program.database);
+
+    nosql.startInput();
+

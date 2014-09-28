@@ -1,0 +1,39 @@
+{
+  "name": "nosql-cli",
+  "version": "0.0.1",
+  "description": "Command line tool for NoSQL",
+  "main": "nosql",
+  "scripts": {
+    "test": "nosql-dbg"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/wgallios/nosql-cli.git"
+  },
+  "keywords": [
+    "NoSQL",
+    "CLI",
+    "Command",
+    "Line",
+    "Tool"
+  ],
+  "author": "William Gallios <wililamgallios@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wgallios/nosql-cli/issues"
+  },
+  "dependencies": {
+    "easy-table": "~0.3.0",
+    "commander": "~2.3.0",
+    "nosql": "~2.0.9",
+    "single-line-log": "~0.4.1",
+    "q": "~1.0.1"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "grunt-contrib-jshint": "~0.10.0",
+    "grunt-contrib-watch": "~0.6.1",
+    "grunt-bump": "0.0.15",
+    "grunt-cli": "~0.1.13"
+  }
+}
